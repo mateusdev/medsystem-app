@@ -12,7 +12,7 @@ import medsystem.model.Paciente;
  * @author leonardo
  */
 public class PacienteLogado {
-    static ArrayList<Paciente> listaPacientes = new ArrayList();
+    public static ArrayList<Paciente> listaPacientes = new ArrayList();
     
     public static void LogarPaciente(Paciente p){
         listaPacientes.add(p);

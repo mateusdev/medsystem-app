@@ -4,7 +4,7 @@ import medsystem.model.Agenda;
 import medsystem.model.Medico;
 
 public class MedicoControl {
-    static ArrayList<Medico> listaMedicos = new ArrayList();
+    public static ArrayList<Medico> listaMedicos = new ArrayList();
     
     public static void CadastrarMedico(Medico p){
         listaMedicos.add(p);

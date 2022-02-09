@@ -3,8 +3,8 @@ import java.util.ArrayList;
 import medsystem.model.TipoAtendimento;
 
 public class TipoAtendimentoControl {
-    static ArrayList<TipoAtendimento> listaTipoAtendimentos = new ArrayList();
-    static int id=0;
+    public static ArrayList<TipoAtendimento> listaTipoAtendimentos = new ArrayList();
+    public static int id=0;
     
     public static void CadastrarTipoAtendimento(TipoAtendimento p){
         id++;

@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import medsystem.model.Atendente;
 
 public class AtendenteControl {
-    static ArrayList<Atendente> listaAtendentees = new ArrayList();
+    public static ArrayList<Atendente> listaAtendentees = new ArrayList();
     
     public static void CadastrarAtendente(Atendente p){
         listaAtendentees.add(p);

@@ -9,7 +9,7 @@ import medsystem.model.Status;
 import medsystem.model.TipoAtendimento;
 
 public class ConsultaControl {
-    static ArrayList<Consulta> listaConsultas = new ArrayList();
+    public static ArrayList<Consulta> listaConsultas = new ArrayList();
     
     public static void CadastrarConsulta(Consulta p){
         listaConsultas.add(p);

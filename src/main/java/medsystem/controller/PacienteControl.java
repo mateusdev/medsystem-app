@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import medsystem.model.Paciente;
 
 public class PacienteControl {
-    static ArrayList<Paciente> listaPacientes = new ArrayList();
+    public static ArrayList<Paciente> listaPacientes = new ArrayList();
     
     public static void CadastrarPaciente(Paciente p){
         listaPacientes.add(p);

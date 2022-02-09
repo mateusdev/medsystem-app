@@ -3,8 +3,8 @@ import java.util.ArrayList;
 import medsystem.model.Horario;
 
 public class HorarioControl {
-    static ArrayList<Horario> listaHorarios = new ArrayList();
-    static int id=0;
+    public static ArrayList<Horario> listaHorarios = new ArrayList();
+    public static int id=0;
     
     public static void CadastrarHorario(Horario p){
         id++;

@@ -13,7 +13,7 @@ import medsystem.model.Atendente;
  * @author leonardo
  */
 public class AtendenteLogado {
-    static ArrayList<Atendente> listaAtendentes = new ArrayList();
+    public static ArrayList<Atendente> listaAtendentes = new ArrayList();
     
     public static void LogarAtendente(Atendente p){
         listaAtendentes.add(p);

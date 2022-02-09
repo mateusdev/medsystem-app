@@ -3,8 +3,8 @@ import java.util.ArrayList;
 import medsystem.model.Status;
 
 public class StatusControl {
-    static ArrayList<Status> listaStatus = new ArrayList();
-    static int id=0;
+    public static ArrayList<Status> listaStatus = new ArrayList();
+    public static int id=0;
     
     public static void CadastrarStatus(Status p){
         id++;

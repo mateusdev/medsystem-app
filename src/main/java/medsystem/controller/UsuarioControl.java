@@ -13,7 +13,7 @@ import medsystem.model.Usuario;
  * @author leonardo
  */
 public class UsuarioControl {
-    static ArrayList<Usuario> listaUsuarios = new ArrayList();
+    public static ArrayList<Usuario> listaUsuarios = new ArrayList();
     
     public static void CadastrarUsuario(Usuario u) {
         listaUsuarios.add(u);

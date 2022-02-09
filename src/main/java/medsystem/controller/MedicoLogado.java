@@ -13,7 +13,7 @@ import medsystem.model.Medico;
  * @author leonardo
  */
 public class MedicoLogado {
-    static ArrayList<Medico> listaMedicos = new ArrayList();
+    public static ArrayList<Medico> listaMedicos = new ArrayList();
     
     public static void LogarMedico(Medico p){
         listaMedicos.add(p);

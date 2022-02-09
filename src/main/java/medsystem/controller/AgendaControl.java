@@ -4,16 +4,16 @@ import medsystem.model.Agenda;
 import medsystem.model.Horario;
 
 public class AgendaControl {
-    static ArrayList<Agenda> listaAgendas = new ArrayList();
-    static int id=0;
-    
-    static void CadastrarAgenda(Agenda p){
+    public static ArrayList<Agenda> listaAgendas = new ArrayList();
+    public static int id=0;
+
+    public static void CadastrarAgenda(Agenda p){
         id++;
         p.setId(id);
         listaAgendas.add(p);
     }
 
-    static boolean AlterarAgenda(int id, int fkMedico, Horario deSegunda, Horario deTerca,
+    public static boolean AlterarAgenda(int id, int fkMedico, Horario deSegunda, Horario deTerca,
             Horario deQuarta, Horario deQuinta, Horario deSexta){
         for(Agenda a : listaAgendas){
             if(a.getId() == id){
@@ -29,20 +29,20 @@ public class AgendaControl {
         return false;
     }
 
-    static Agenda PesquisarAgenda(int fkMedico){
+    public static Agenda PesquisarAgenda(int fkMedico){
         for(Agenda a : listaAgendas){
             if (a.getFkMedico() == fkMedico)
                 return a;
         }
         return null;
     }
- 
-    static void DeletarAgenda(Agenda c){
+
+    public static void DeletarAgenda(Agenda c){
         listaAgendas.remove(c);
         id--;
     }
-    
-    static ArrayList<Agenda> ListarAgendas(){
+
+    public static ArrayList<Agenda> ListarAgendas(){
         return listaAgendas;
     }
 }
