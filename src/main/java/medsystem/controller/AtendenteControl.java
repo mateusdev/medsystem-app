@@ -3,15 +3,15 @@ import java.util.ArrayList;
 import medsystem.model.Atendente;
 
 public class AtendenteControl {
-    public static ArrayList<Atendente> listaAtendentees = new ArrayList();
+    public static ArrayList<Atendente> listaAtendentes = new ArrayList();
     
     public static void CadastrarAtendente(Atendente p){
-        listaAtendentees.add(p);
+        listaAtendentes.add(p);
     }
     
     public static boolean AlterarAtendente(int id, String nome, String cpf, String rg, String contato,
         String nasc, String endereco, String sexo){
-        for(Atendente m : listaAtendentees){
+        for(Atendente m : listaAtendentes){
             if(m.getId() == id){
                 m.setNome(nome);
                 m.setCpf(cpf);
@@ -27,15 +27,23 @@ public class AtendenteControl {
     }
 
     public static Atendente PesquisarAtendente(String cpf){
-        for(Atendente a : listaAtendentees){
+        for(Atendente a : listaAtendentes){
             if (a.getCpf().equals(cpf))
                 return a;
         }
         return null;
     }
-    
+
+    public static Atendente PesquisarAtendentePorId(int id){
+        for(Atendente a : listaAtendentes){
+            if (a.getId() == id)
+                return a;
+        }
+        return null;
+    }
+
     public static Atendente PesquisarUsuarioAtendente(String usuario, String senha){
-        for(Atendente p : listaAtendentees){
+        for(Atendente p : listaAtendentes){
             if (p.getUsername().equals(usuario) && p.getPassword().equals(senha))
                 return p;
         }
@@ -43,10 +51,10 @@ public class AtendenteControl {
     }
     
     public static void DeletarAtendente(Atendente a){
-        listaAtendentees.remove(a);
+        listaAtendentes.remove(a);
     }
     
     public static ArrayList<Atendente> ListarAtendentes(){
-        return listaAtendentees;
+        return listaAtendentes;
     }
 }

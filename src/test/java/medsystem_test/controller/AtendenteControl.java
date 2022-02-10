@@ -26,7 +26,7 @@ public class AtendenteControl {
                 "Grove Street",
                 "sim");
 
-        assert(Objects.equals(medsystem.controller.AtendenteControl.listaAtendentees.get(0).getNome(), "Joao"));
+        assert(Objects.equals(medsystem.controller.AtendenteControl.listaAtendentes.get(0).getNome(), "Joao"));
     }
 
     @Test
@@ -36,6 +36,7 @@ public class AtendenteControl {
         Atendente atendente = new Atendente();
         atendente.setUsername("myatendente2");
         atendente.setCpf("000.000.000-00");
+        atendente.setId(1);
 
         medsystem.controller.AtendenteControl.CadastrarAtendente(atendente);
         Atendente a = medsystem.controller.AtendenteControl.PesquisarAtendente("000.000.000-00");
@@ -51,9 +52,9 @@ public class AtendenteControl {
 
         medsystem.controller.AtendenteControl.CadastrarAtendente(atendente);
         medsystem.controller.AtendenteControl.DeletarAtendente(atendente);
-        int tamanho = medsystem.controller.AtendenteControl.listaAtendentees.size();
+        int tamanho = medsystem.controller.AtendenteControl.listaAtendentes.size();
 
-        assert(tamanho == 3);
+        assert(tamanho == 4);
     }
 
     @Test
@@ -64,9 +65,23 @@ public class AtendenteControl {
         atendente.setUsername("myatendente0");
 
         medsystem.controller.AtendenteControl.CadastrarAtendente(atendente);
-        int tamanho = medsystem.controller.AtendenteControl.listaAtendentees.size();
+        int tamanho = medsystem.controller.AtendenteControl.listaAtendentes.size();
 
         assert(tamanho == 1);
     }
 
+    @Test
+    @Order(5)
+    @DisplayName("Testando AtendenteControl->PesquisarAtendentePorId")
+    void PesquisarAtendentePorIdTest(){
+        Atendente atendente = new Atendente();
+        atendente.setUsername("myatendente8");
+        atendente.setCpf("120.000.000-11");
+        atendente.setId(5);
+
+        medsystem.controller.AtendenteControl.CadastrarAtendente(atendente);
+
+        Atendente a = medsystem.controller.AtendenteControl.PesquisarAtendentePorId(5);
+        assert(Objects.equals(a.getCpf(), atendente.getCpf()));
+    }
 }
